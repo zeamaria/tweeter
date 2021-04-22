@@ -6,8 +6,16 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: beige;
+  background-color: #e3d8c6;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
+
+.writenew {
+    float:  right;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 3px;
+}
+
 
 .profileImage {
   border-radius: 50%;
