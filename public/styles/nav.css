@@ -1,0 +1,33 @@
+
+
+.topnav {
+    background-color:#4056A1;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Bungee', cursive;
+    margin-top: 0px;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    height: 120px;
+    width: 100%
+}
+
+nav span {
+    display: flex;
+    font-family: 'Bungee', cursive;
+  }
+
+.newBoxTweet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.writenew {
+    float:  right;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 3px;
+}
+
