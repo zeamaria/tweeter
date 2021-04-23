@@ -26,4 +26,16 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- 
+ main {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction:column;
+   padding-right: 10%;
+   padding-left:10%;
+   background-color:bisque;
+   margin: auto;
+
+
+ }
