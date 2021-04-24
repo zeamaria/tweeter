@@ -1,6 +1,7 @@
 
-
 .topnav {
+    position: fixed;
+    width: 100%;
     background-color:#4056A1;
     color: #ffff;
     display: flex;
@@ -30,4 +31,6 @@ nav span {
     font-family: 'Source Sans Pro', sans-serif;
     margin-top: 3px;
 }
+
+
 
