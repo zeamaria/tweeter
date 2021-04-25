@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
@@ -21,46 +35,51 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js"
+      integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA=="
+      crossorigin="anonymous"
+    ></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
     <script type="text/javascript" src="/scripts/time-ago.js"></script>
-
   </head>
 
-    <body>
-      
+  <body>
     <!-- Top nav bar (fixed) -->
     <nav class="topnav">
       <span>Tweeter</span>
       <div class="newBoxTweet">
-       <p class="writenew">
-         <strong> Write </strong> a new Tweet</p> 
-       <i class="fas fa-angle-double-down"></i>
+        <p class="writenew"><strong> Write </strong> a new Tweet</p>
+        <i class="fas fa-angle-double-down"></i>
       </div>
+    </nav>
 
-   </nav>
+    <header class="headerProfile">
+      <div>
+        <img class="profileImage" src="/images/profile-hex.png" />
+      </div>
+      <br />
+      <div class="avatarName">
+        <h2>Zea</h2>
+      </div>
+    </header>
 
-   <header class="headerProfile">
-     <div>
-         <img class="profileImage" src="/images/profile-hex.png"> 
-     </div>
-     <br>
-     <div class="avatarName">
-         <h2>Zea</h2>
-     </div>
-   </header>
-      
-
-  <!-- Page-specific (main) content here -->
+    <!-- Page-specific (main) content here -->
 
     <main class="container">
-
       <section class="new-tweet">
-        <form id="target" class="tweet-form" method="POST" action="/tweets">
+        <form id="target" class="tweet-form">
           <div class="text-area">
-           <textarea name="text" id="tweet-text" placeholder="what are you humming about?"></textarea>
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="what are you humming about?"
+            ></textarea>
           </div>
           <div class="compose-tweet-footer">
             <button type="submit">Tweet</button>
@@ -68,42 +87,33 @@
           </div>
         </form>
       </section>
-      <br><br>
+      <br /><br />
 
-      <section class="tweet-container">
-        <article class="user-tweet">
-          <header class="user-tweet-header">
-            <h5>User</h5>
-            <h4>@username</h4>
-          </header>
-          <div class="user-tweet-body">
-            <p>simply dummy text of the printing and typesetting industry.</p>
-          </div>
-          <footer class="user-tweet-footer">
-            <h6>
-              <time class="timeago" datetime="2020-07-17T09:24:17Z">July 17, 2020</time>
-            </h6>
-            <div class="icons">
-              <i class="fas fa-flag icon"  w3-tiny></i>
-              <i class="fas fa-retweet icon" w3-tiny></i>
-              <i class="fas fa-heart icon" w3-tiny></i>
-            </div>
-          </footer>
-        </article>
-      </section>
-      
+      <section id="tweet-container"></section>
     </main>
   </body>
 
   <script>
-        $( "#target" ).submit(function( event ) {
-        // alert( "Handler for .submit() called." );
-        console.log( $( this ).serialize())
-        event.preventDefault();
-      });
+    $(document).ready(function () {
+      renderTweets();
+    });
+
+    $("#target").submit(function (event) {
+      let tweet = $("#tweet-text").val();
+      let tweetData = {
+        "user": {
+          "name": "Newton",
+          "avatars": "https://i.imgur.com/73hZDYK.png"
+          ,
+          "handle": "@SirIsaac"
+        },
+        "content": {
+          "text": tweet
+        },
+        "created_at": new Date()
+      };
+      $( "#tweet-container" ).prepend( createTweetElement(tweetData) );
+      event.preventDefault();
+    });
   </script>
-
-  <!-- trigger Ajax req to post tweet, attach tweet to DOM for render -->
-
 </html>
-
