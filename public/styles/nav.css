@@ -16,6 +16,7 @@
 
 nav span {
     display: flex;
+    align-items: center;
     font-family: 'Bungee', cursive;
   }
 

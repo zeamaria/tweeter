@@ -4,41 +4,23 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
- const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 // replace @username with actual data / date/ timeago = created_at time
 const createTweetElement = function(tweetData) {
   let newTweet = `
   <article class="user-tweet">
     <header class="user-tweet-header">
-      <h5>User</h5>
+    <i class="fas fa-user-astronaut"></i>
+      <h5>Zea</h5>
       <h4>${tweetData.user.handle}</h4>
     </header>
     <div class="user-tweet-body">
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
     </div>
     <footer class="user-tweet-footer">
       <h6>
@@ -56,7 +38,36 @@ const createTweetElement = function(tweetData) {
 };
 
 const renderTweets = function() {
-  data.forEach((tweetData) => {
-    $( "#tweet-container" ).append( createTweetElement(tweetData) );
+  $( "#tweet-container" ).html('');
+  $.ajax('/tweets', { method: 'GET' })
+  .then(function (data) {
+    data.forEach((tweetData) => {
+      $( "#tweet-container" ).prepend( createTweetElement(tweetData) );
+    });
+  });
+}
+
+const saveTweet = function(tweet) {
+  let tweetData = {
+    "user": {
+      "name": "Newton",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@SirIsaac"
+    },
+    "text": tweet
+  };
+
+  $.ajax('/tweets', { method: 'POST', data: tweetData })
+  .done(function (results) {
+    renderTweets();
   })
+  .fail(function() {
+    showError("There was an error saving your Tweet.");
+  });
+}
+
+const showError = function(error) {
+  $('#tweet-error').text(error);
+  $('#tweet-error').slideDown();
 }
