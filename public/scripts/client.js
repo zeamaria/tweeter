@@ -15,9 +15,11 @@ const createTweetElement = function(tweetData) {
   let newTweet = `
   <article class="user-tweet">
     <header class="user-tweet-header">
+    <div class="avatar-name">
     <i class="fas fa-user-astronaut"></i>
       <h5>Zea</h5>
-      <h4>${tweetData.user.handle}</h4>
+    </div>
+    <h4>${tweetData.user.handle}</h4>
     </header>
     <div class="user-tweet-body">
       <p>${escape(tweetData.content.text)}</p>
