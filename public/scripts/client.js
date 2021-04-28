@@ -72,4 +72,12 @@ const saveTweet = function(tweet) {
 const showError = function(error) {
   $('#tweet-error').text(error);
   $('#tweet-error').slideDown();
+  hideError();
+}
+
+const hideError = function() {
+  setTimeout(function(){
+    $('#tweet-error').text("");
+    $('#tweet-error').slideUp();
+  }, 3000);
 }
