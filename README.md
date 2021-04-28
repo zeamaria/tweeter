@@ -7,13 +7,13 @@ This repository is the starter code for the project: Students will fork and clon
 # Screenshots
 
 Screenshot of homepage for Tweeter App.
-!["Screenshot of home page for Tweeter "]()
+!["Screenshot of home page for Tweeter "](https://github.com/zeamaria/tweeter/blob/master/docs/Tweeter%20-%20Home%20Page.png)
 
 Screenshot of responsive homepage for Tweeter App.
-!["Screenshot of responsive homepage for Tweeter App."]()
+!["Screenshot of responsive homepage for Tweeter App."](https://github.com/zeamaria/tweeter/blob/master/docs/Tweeter%20-%20Home%20Page%20-%20Responsive.png)
 
 GIF of functionality updates
-!["GIF of functionality updates page for Tweeter "]()
+!["GIF of functionality updates page for Tweeter "](https://github.com/zeamaria/tweeter/blob/master/docs/testing%20tweeter.gif)
 
 ## Getting Started
 
