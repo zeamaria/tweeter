@@ -6,7 +6,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 # Screenshots
 
+Screenshot of homepage for Tweeter App.
+!["Screenshot of home page for Tweeter "]()
 
+Screenshot of responsive homepage for Tweeter App.
+!["Screenshot of responsive homepage for Tweeter App."]()
+
+GIF of functionality updates
+!["GIF of functionality updates page for Tweeter "]()
 
 ## Getting Started
 
